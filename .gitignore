@@ -1,0 +1,11 @@
+# Folders
+.vscode/
+tmp/
+node_modules/
+
+# Files
+.DS_Store
+dump.rdb
+config.yaml
+temp.go
+queries.sql

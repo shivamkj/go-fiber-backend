@@ -1,0 +1,21 @@
+port: 8080
+redis_url: redis://:@localhost:6379/0 # redis://<user>:<pass>@localhost:6379/<db>
+db:
+  type: 1
+  connection_url: "postgresql://local_user:password@localhost:5432/qnify"
+  maxOpenConnections: 30
+  maxIdleConnections: 30
+  connectionMaxLifetime: 5
+  connectionMaxIdleTime: 5
+
+auth:
+  origin: http://localhost:3000
+
+  token:
+    access_secret: "cc1eb2f1b7c1cdc1a436c7d508527cf0aeb163518322318bc0906d4ab2506f9"
+    refresh_secret: "02025a376e71d90dbaa9a05c3d012a38f237d8aac959bde721edd39ef834084"
+
+  google:
+    client_id: "921526383023-9soqf9dweqop9lkeq0f1361i3803js24.apps.googleusercontent.com"
+    client_secret: "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S"
+    redirect_uri: "http://localhost:8000/oauth/google"

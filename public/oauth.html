@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OAuth Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>OAuth Test</h1>
+    <button id="google-btn">Sign in with Google</button>
+    <button id="apple-btn">Sign in with Apple</button>
+
+    <script>
+        document.getElementById('google-btn').addEventListener('click', function() {
+            window.location.href = 'https://accounts.google.com/o/oauth2/auth?client_id=931556393674-9eeqf9dsqqth9jmeq0f1o61i1597js24.apps.googleusercontent.com&redirect_uri=http://localhost:8080/redirect.html&response_type=code&scope=email%20profile&prompt=consent';
+            // Replace YOUR_GOOGLE_CLIENT_ID and YOUR_REDIRECT_URI with your actual Google OAuth client ID and redirect URI
+        });
+
+        document.getElementById('apple-btn').addEventListener('click', function() {
+            window.location.href = 'https://appleid.apple.com/auth/authorize?response_type=code&client_id=YOUR_APPLE_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&scope=name%20email';
+            // Replace YOUR_APPLE_CLIENT_ID and YOUR_REDIRECT_URI with your actual Apple client ID and redirect URI
+        });
+    </script>
+</body>
+</html>
